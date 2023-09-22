@@ -5,3 +5,11 @@
 .bg-custom {
     background-color: #069680;
 }
+
+.card {
+    transition: transform 1s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
