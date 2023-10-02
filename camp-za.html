@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-<head>
   <title>PeninsulAR</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -11,16 +10,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/camp-za.css">
-    <script src="/assets/index.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-
+      <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+      <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-custom">
@@ -45,84 +38,11 @@
               </ul>
             </li>
   </header>
+
   <main class="my-5">
     <div class="container mb-2">
-      <div class="row row-cols-1 row-cols-md-5 g-4">
-        <div class="col-md-4">
-          <div id="tarjetaPlantilla" class="card rotate">
-            <img src="/imgs-zonas/cam-calakmul-za.jfif" class="card-img-top img-fluid h-100" alt="...">
-             <div class="card-front">
-               <div class="card-body bg-custom">
-              <h5 class="card-title text-white">Calakmul</h5>
-              <p class="card-text text-white">Calakmul es uno de los sitios arqueológicos más importantes del mundo maya. Fue una ciudad-estado poderosa durante el período Clásico Maya. Se caracteriza por su impresionante sistema de pirámides y estructuras ceremoniales.</p>
-              <button id="girarBoton">Ver en AR</button>
-               </div>
-           </div>
-           <div class="card-back">
-            <img src="/assets/marcador-ar.png" alt="" class="img-fluid h-100 back-image">
-            <video id="cam"></video>
-           </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card" id="tarjetaPlantilla">
-            <img src="/imgs-zonas/cam-edzna-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-front">
-              <div class="card-body bg-custom">
-                <h5 class="card-title text-white">Edzna</h5>
-                <p class="card-text text-white">Edzná fue una antigua ciudad maya que prosperó durante el período Clásico Tardío. Es conocida por su impresionante sistema de canales y embalses, que ayudaban a controlar el agua en la zona.</p>
-            </div>
-            </div>
-            <div class="card-back">
-              <img src="/imgs-zonas/cam-edzna-za.jpg" alt="" class="img-fluid h-100 back-image">
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-front">
-              <img src="/imgs-zonas/cam-hormiguero-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-body bg-custom">
-              <h5 class="card-title text-white">Hormiguero</h5>
-              <p class="card-text text-white">Hormiguero es un sitio arqueológico que data del período Clásico Maya. Su nombre se debe a la abundancia de hormigas en la zona. Destacan las estructuras monumentales y una pirámide central.</p>
-            </div>
-            </div>
-            <div class="card-back">
-              <img src="/imgs-zonas/cam-edzna-za.jpg" alt="" class="img-fluid h-100 back-image">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-front">
-              <img src="/imgs-zonas/cam-kanki-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-body bg-custom">
-              <h5 class="card-title text-white">Kankí</h5>
-              <p class="card-text text-white">Kankí es un sitio arqueológico que pertenece al período Clásico Tardío de la civilización maya. Aunque es un sitio relativamente pequeño, contiene una serie de estructuras y plazas que muestran la habilidad arquitectónica de los antiguos mayas.</p>
-            </div>
-            </div>
-            <div class="card-back">
-              <img src="/imgs-zonas/cam-edzna-za.jpg" alt="" class="img-fluid h-100 back-image">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="/imgs-zonas/cam-xpuhil-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-front">
-              <div class="card-body bg-custom">
-                <h5 class="card-title text-white">Xpuhil</h5>
-                <p class="card-text text-white">Xpuhil es otro importante sitio arqueológico de la cultura maya. Contiene diversas estructuras, incluyendo una pirámide y una serie de edificios bien preservados. Xpuhil es conocida por su arquitectura distintiva y detalles decorativos en las fachadas de los edificios.</p>
-              </div>
-            </div>
-            <div class="card-back">
-              <img src="/imgs-zonas/cam-edzna-za.jpg" alt="" class="img-fluid h-100 back-image">
-            </div>
-          </div>
-        </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4" id="camp-cards-container">
       </div>
-  
     </div>
   </main>
   <footer>
@@ -136,6 +56,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+
+<script src="/assets/index.js"></script>
+<script src="/assets/cam-redir.js" defer></script>
 </body>
+
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Título del Modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Contenido del modal...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </html>

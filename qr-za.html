@@ -11,6 +11,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/qr-za.css">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 </head>
 
@@ -40,53 +42,7 @@
   </header>
   <main class="my-5">
     <div class="container mb-2">
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-          <div class="card">
-            <img src="/imgs-zonas/qr-coba-za.jfif" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-body bg-custom">
-              <h5 class="card-title text-white">Cobá</h5>
-              <p class="card-text text-white">Cobá fue una antigua ciudad maya que floreció durante el período Clásico. Es conocida por su red de sacbés (antiguos caminos) que conectan las diversas estructuras de la ciudad.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="/imgs-zonas/qr-elmeco-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-body bg-custom">
-              <h5 class="card-title text-white">El Meco</h5>
-              <p class="card-text text-white">El Meco es un sitio arqueológico de tamaño moderado con una gran pirámide central y otras estructuras. Es conocido por su ubicación junto al mar y las vistas panorámicas que ofrece desde su pirámide.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="/imgs-zonas/qr-sanmiguelito-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-body bg-custom">
-              <h5 class="card-title text-white">San Miguelito</h5>
-              <p class="card-text text-white">San Miguelito es un pequeño sitio arqueológico maya ubicado en el corazón de la zona hotelera de Cancún. Contiene una serie de estructuras y patios. Aunque es más pequeño que otros sitios, ofrece una visión de la cultura maya en un contexto urbano.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="/imgs-zonas/qr-tulum-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-body bg-custom">
-              <h5 class="card-title text-white">Tulum</h5>
-              <p class="card-text text-white">Tulum es una antigua ciudad amurallada de la civilización maya que floreció durante el período Posclásico. Su nombre significa "muralla" o "ciudad amurallada" en maya. Es conocida por su impresionante ubicación junto al mar, lo que la convierte en una de las zonas arqueológicas más fotografiadas del mundo.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="/imgs-zonas/qr-xcaret-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-            <div class="card-body bg-custom">
-              <h5 class="card-title text-white">Xcaret</h5>
-              <p class="card-text text-white">Aunque Xcaret no es una zona arqueológica tradicional, es un parque eco-arqueológico que preserva la historia y cultura maya. Ofrece una combinación de áreas naturales y atracciones culturales.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4" id="qr-cards-container">
       </div>
     </div>
   </main>
@@ -101,6 +57,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+
+  <script src="/assets/index.js"></script>
+  <script src="/assets/cam-redir.js" defer></script>
 </body>
 
 </html>

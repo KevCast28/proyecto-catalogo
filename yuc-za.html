@@ -11,6 +11,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/yuc-za.css">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 </head>
 
@@ -18,7 +20,7 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-custom">
       <div class="container-fluid">
-        <a class="navbar-brand text-white href="index.html">PeninsulAR</a>
+        <a class="navbar-brand text-white" href="index.html">PeninsulAR</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,65 +42,11 @@
   </header>
   <main class="my-5">
     <div class="container mb-2">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div class="col">
-        <div class="card">
-          <img src="/imgs-zonas/yuc-ake-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-          <div class="card-body bg-custom bg-custom">
-            <h5 class="card-title text-white">Aké</h5>
-            <p class="card-text text-white">Aké es un sitio arqueológico maya ubicado en la región de los Petenes, en el norte de la península de Yucatán. Destaca por su impresionante pirámide conocida como la "Pirámide de Aké". También contiene un gran número de estructuras y una plaza central.</p>
-          </div>
-        </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4" id="yuc-cards-container">
       </div>
-      <div class="col">
-        <div class="card">
-          <img src="/imgs-zonas/yuc-chichen-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-          <div class="card-body bg-custom">
-            <h5 class="card-title text-white">Chichén Itzá</h5>
-            <p class="card-text text-white">Chichén Itzá es uno de los sitios arqueológicos más famosos y visitados de México y del mundo. Fue una ciudad importante de la civilización maya y es conocida por la pirámide de Kukulcán (también conocida como El Castillo), que es una de las Nuevas Maravillas del Mundo.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="/imgs-zonas/yuc-ekbalam-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-          <div class="card-body bg-custom">
-            <h5 class="card-title text-white">Ek Balam</h5>
-            <p class="card-text text-white">Ek Balam es un sitio arqueológico que fue una ciudad maya durante el período Clásico Tardío. Es conocido por la impresionante Acrópolis, que incluye la pirámide de Ek Balam con una tumba real bien conservada.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="/imgs-zonas/yuc-mayapan-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-          <div class="card-body bg-custom">
-            <h5 class="card-title text-white">Mayapán</h5>
-            <p class="card-text text-white">Mayapán fue una ciudad amurallada importante de la civilización maya durante el período Posclásico. Es conocida por su estilo arquitectónico característico y por su Templo Redondo, único en su tipo en la región.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="/imgs-zonas/yuc-sayil-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-          <div class="card-body bg-custom">
-            <h5 class="card-title text-white">Sayil</h5>
-            <p class="card-text text-white">Sayil fue una ciudad maya que formó parte de la liga de ciudades conocidas como la Liga de Mayapán. Destaca por su estructura más famosa, el Palacio, que es una serie de estructuras alargadas que se extienden a lo largo de una colina.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="/imgs-zonas/yuc-uxmal-za.jpg" class="card-img-top img-fluid h-100" alt="...">
-          <div class="card-body bg-custom">
-            <h5 class="card-title text-white">Uxmal</h5>
-            <p class="card-text text-white">Uxmal es otro de los sitios arqueológicos más importantes y mejor conservados de la región. Es conocido por su arquitectura elaborada y sus decoraciones detalladas. Destaca la Pirámide del Adivino y el Cuadrángulo de las Monjas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
     </div>
   </main>
+
   <footer>
     <!-- place footer here -->
   </footer>
@@ -110,6 +58,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+
+  <script src="/assets/index.js"></script>
+  <script src="/assets/cam-redir.js" defer></script>
 </body>
 
 </html>
